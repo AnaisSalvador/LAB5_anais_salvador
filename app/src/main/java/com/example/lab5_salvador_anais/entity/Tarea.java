@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 
 public class Tarea implements Serializable{
-    private String title;
-    private String description;
+    private String titulo;
     private long reminderTime;
+    private String descripcion;
     private boolean notified;
 
     public boolean isNotified() {
@@ -17,27 +17,19 @@ public class Tarea implements Serializable{
         this.notified = notified;
     }
 
-    public Tarea(String title, String description, long reminderTime) {
-        this.title = title;
-        this.description = description;
+    public Tarea(String titulo, String descripcion, long reminderTime) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
         this.reminderTime = reminderTime;
     }
 
 
-    public String getTitle() {
-        return title;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public long getReminderTime() {
@@ -48,9 +40,18 @@ public class Tarea implements Serializable{
         this.reminderTime = reminderTime;
     }
 
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     public boolean isReadyForNotification(long currentTime) {
         return reminderTime <= currentTime && currentTime <= reminderTime + TimeUnit.MINUTES.toMillis(15);
     }
+
 }
 
 
