@@ -23,7 +23,21 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".AgregarFragment"
+            android:exported="false" />
 
+        <activity
+            android:name=".EditarFragment"
+            android:exported="false" />
+
+        <activity
+            android:name=".FirstFragment"
+            android:exported="false" />
+
+        <activity
+            android:name=".SecondFragment"
+            android:exported="false" />
 
     </application>
 
